@@ -1,42 +1,101 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #f9e2e7, #d7f7f5);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.container {
+  max-width: 720px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 28px;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+.title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #6a4c93;
 }
+
+.form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.form input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 2px solid #cdb4db;
+  border-radius: 12px;
+  outline: none;
+  font-size: 1rem;
+}
+
+.form button {
+  padding: 10px 18px;
+  background: #a2d2ff;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.form button:hover { background: #90c7ff; }
+
+.list {
+  list-style: none;
+  padding: 0;
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.done {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.edit-input {
+  padding: 8px 10px;
+  border: 2px solid #b5e48c;
+  border-radius: 10px;
+  margin-right: 10px;
+  font-size: 1rem;
+}
+
+.edit, .delete, .save, .cancel {
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 10px;
+  transition: 0.2s;
+}
+
+.edit { background: #ffe066; }
+.edit:hover { background: #ffd43b; }
+
+.delete { background: #ff8fab; }
+.delete:hover { background: #ff758f; }
+
+.save { background: #90e0ef; }
+.save:hover { background: #48cae4; }
+
+.cancel { background: #cdb4db; }
+.cancel:hover { background: #b197fc; }
